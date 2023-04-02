@@ -23,7 +23,19 @@
 			strokeWidth: 4
 		});
 
+		const rect2 = new Konva.Rect({
+			x: 150,
+			y: 20,
+			width: 100,
+			height: 100,
+			fill: 'aqua',
+			shadowColor: 'rgba(1,1,1,0.5)',
+			shadowBlur: 10,
+			cornerRadius: 5
+		});
+
 		layer.add(rect1);
+		layer.add(rect2);
 		stage.add(layer);
 	});
 </script>
