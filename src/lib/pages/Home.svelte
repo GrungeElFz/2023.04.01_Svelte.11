@@ -1,2 +1,31 @@
 <script>
+	import { onMount } from 'svelte';
+	import Konva from 'konva';
+
+	let container;
+
+	onMount(() => {
+		const stage = new Konva.Stage({
+			container,
+			width: 300,
+			height: 400
+		});
+
+		const layer = new Konva.Layer();
+
+		const rect1 = new Konva.Rect({
+			x: 20,
+			y: 20,
+			width: 100,
+			height: 60,
+			fill: 'purple',
+			stroke: 'white',
+			strokeWidth: 4
+		});
+
+		layer.add(rect1);
+		stage.add(layer);
+	});
 </script>
+
+<div bind:this={container} />
